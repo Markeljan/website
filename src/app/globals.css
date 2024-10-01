@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: hsl(0, 0%, 0%);
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.aspect-ratio {
+  aspect-ratio: 1.8/1;
+}
+
+.container-home {
+  width: 100%;
+}
+
+@media only screen and (min-width: 2000px) {
+  .container-home {
+    width: 1600px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 2000px) {
+  .header-container {
+    justify-content: center;
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (min-width: 2000px) {
+
+  .header-wrapper,
+  .footer-wrapper {
+    width: 1600px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.animation-height {
+  height: calc(100vh - 80px);
+}
+
+@media only screen and (max-width: 767px) {
+  .right-edge-extension {
+    margin-right: -20px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .right-edge-extension-desktop {
+    margin-right: -80px;
+  }
+}
+
+.blog-pre {
+  margin-bottom: 3em !important;
+  -webkit-box-shadow:
+    -10px 0px 13px -7px #000000,
+    10px 0px 13px -7px #000000,
+    35px -23px 2px -16px rgba(0, 0, 0, 0);
+  box-shadow:
+    -10px 0px 13px -7px #000000,
+    10px 0px 13px -7px #000000,
+    35px -23px 2px -16px rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.banner img:nth-child(2) {
+  transition: all 0.5s;
+  /* Apply transition to all properties */
+}
+
+.banner:hover img:nth-child(2) {
+  filter: brightness(0) invert(1);
+  margin-left: 0.75rem;
+}
+
+/* scrollbar */
+
+.disable-scrollbars::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbars {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.hover-icon:hover svg {
+  stroke: #fafafa;
+  /* Change color to white on hover */
+  transition: all 300ms;
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 50%,
+      #000000 100%);
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}

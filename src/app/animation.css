@@ -1,0 +1,73 @@
+.anim-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  max-height: 750px !important;
+  background-color: black;
+  transition: background-color 0.3s;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.anim-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+}
+
+.jumbo {
+  position: absolute;
+  inset: -10px;
+  opacity: 50%;
+  background-image: repeating-linear-gradient(
+      100deg,
+      #000 0%,
+      #000 7%,
+      transparent 10%,
+      transparent 12%,
+      #000 16%
+    ),
+    repeating-linear-gradient(
+      100deg,
+      #60a5fa 10%,
+      #e879f9 15%,
+      #60a5fa 20%,
+      #5eead4 25%,
+      #60a5fa 30%
+    );
+  background-size: 300%, 200%;
+  background-position: center;
+  filter: blur(10px) opacity(50%) saturate(200%);
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+  pointer-events: none;
+  scale: 1.5;
+}
+
+.jumbo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: 200%, 100%;
+  animation: jumbo 60s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: difference;
+}
+
+@keyframes jumbo {
+  from {
+    background-position: center;
+  }
+  to {
+    background-position: 350% center;
+  }
+}
