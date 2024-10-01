@@ -40,7 +40,7 @@ const Hero = () => {
                 className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
                 onClick={() => handleCardClick(`${MB_URL.DEV_DOCS}`)}
               >
-                Build Chain Agent
+                Build a Chain Agent
               </Button>
             </div>
           </div>
