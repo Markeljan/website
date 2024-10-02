@@ -30,7 +30,7 @@ export const SupportedChainsSection = () => {
   }, []);
 
   return (
-    <section className='relative my-12 md:my-40'>
+    <section className='relative my-12 md:my-20 md:mb-40'>
       <p
         className={`${fira.className} text-sm text-mb-gray-300 font-normal text-center uppercase mb-10`}
       >

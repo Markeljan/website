@@ -106,7 +106,17 @@ const Header = () => {
                   target='_blank'
                   href={MB_URL.AI_DOCS}
                 >
-                  Documentation <ArrowUpRight size={12} color='#FAFAFA' />
+                  Docs <ArrowUpRight size={12} color='#FAFAFA' />
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className='bg-white rounded-sm'>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} gap-1.5 bg-transparent text-black`}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  href={MB_URL.BITTE_WALLET}
+                >
+                  Create Wallet <ArrowUpRight size={12} color='#000000' />
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
