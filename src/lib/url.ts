@@ -14,7 +14,7 @@ export const MB_URL = {
   MINTBASE_WARPCAST: 'https://warpcast.com/~/channel/mintbase',
   MINTBASE_YT: 'https://www.youtube.com/@mintbase',
   MINTBASE_LINKEDIN: 'https://www.linkedin.com/company/bitte',
-  MINTBASE_GITHUB: 'https://github.com/mintbase',
+  MINTBASE_GITHUB: 'https://github.com/BitteProtocol',
   DEV_DOCS: 'https://docs.bitte.ai/agents/quick-start',
   AI_DOCS: 'https://docs.bitte.ai',
   BOUNTY: 'https://templates.mintbase.xyz/bounty',
