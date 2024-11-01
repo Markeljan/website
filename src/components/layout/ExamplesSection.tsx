@@ -1,6 +1,5 @@
 import { fira } from '@/app/fonts';
 import { dropCardData } from '@/lib/data/dropCardData';
-import { MB_URL } from '@/lib/url';
 import { useWindowSize } from '@/lib/utils/useWindowSize';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -8,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 
-export const ExamplesSection = () => {
+export const ExamplesSection = ({ data = dropCardData }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -76,7 +75,7 @@ export const ExamplesSection = () => {
         <p
           className={`${fira.className} text-sm text-mb-gray-300 font-normal uppercase`}
         >
-          Getting Started
+          {data.title}
         </p>
         <div className='hidden lg:flex gap-4'>
           <Button
@@ -101,32 +100,32 @@ export const ExamplesSection = () => {
         ref={scrollContainerRef}
         className='flex overflow-x-scroll overflow-hidden disable-scrollbars relative -mx-6 md:-mx-20 pl-6'
       >
-        {dropCardData.map((data) => (
+        {data.cards.map((card) => (
           <Card
             className='relative bg-black border border-[#313E52] w-9/12 md:w-1/2 lg:w-[28%] h-[272px] sm:h-[420px] flex-shrink-0 snap-center hover:border-[#E087FFB2] hover:shadow-custom transition-all duration-300 cursor-pointer ml-4 first:ml-6 last:mr-12 md:first:ml-28 md:last:mr-36 overflow-hidden'
-            key={data?.id}
-            onMouseEnter={() => setIsHovered(data.id)}
+            key={card?.id}
+            onMouseEnter={() => setIsHovered(card.id)}
             onMouseLeave={() => setIsHovered(null)}
             onClick={
-              data.isSA
-                ? () => goToSmartActions(data.link, data.action)
-                : () => handleCardClick(data?.link)
+              card.isSA
+                ? () => goToSmartActions(card.link, card.action)
+                : () => handleCardClick(card?.link)
             }
           >
             <div className='absolute inset-0 z-0'>
               <Image
-                src={data.bg}
-                alt={`background image for ${data.action}`}
+                src={card.bg}
+                alt={`background image for ${card.action}`}
                 loading='lazy'
-                layout={data.bg.includes('.svg') ? 'intrinsic' : 'fill'}
-                objectFit={data.bg.includes('.svg') ? 'contain' : 'cover'}
+                layout={card.bg.includes('.svg') ? 'intrinsic' : 'fill'}
+                objectFit={card.bg.includes('.svg') ? 'contain' : 'cover'}
                 width={
-                  data.bg.includes('.svg') ? (isMobile ? 180 : 260) : undefined
+                  card.bg.includes('.svg') ? (isMobile ? 180 : 260) : undefined
                 }
-                height={data.bg.includes('.svg') ? 72 : undefined}
-                className={`z-10 ${data.bg.includes('.svg') ? 'absolute inset-0 m-auto ' : ''}`}
+                height={card.bg.includes('.svg') ? 72 : undefined}
+                className={`z-10 ${card.bg.includes('.svg') ? 'absolute inset-0 m-auto ' : ''}`}
               />
-              {data.gradientLayer && (
+              {card.gradientLayer && (
                 <div className='absolute inset-0 gradient-overlay opacity-50 z-20'></div>
               )}
             </div>
@@ -135,24 +134,24 @@ export const ExamplesSection = () => {
                 <span
                   className={`${fira.className} bg-[#414D7D33] backdrop-blur-md rounded-full text-white uppercase text-xs py-1.5 px-5 self-start`}
                 >
-                  {data?.badge}
+                  {card?.badge}
                 </span>
-                {data?.sub && isMobile && (
+                {card?.sub && isMobile && (
                   <p className='text-white text-sm font-semibold'>
-                    {data?.sub}
+                    {card?.sub}
                   </p>
                 )}
               </div>
               <div className='flex justify-center sm:justify-between sm:h-full'>
                 <div
-                  className={`sm:self-end min-w-full sm:min-w-[135px] sm:max-w-[300px] px-3 py-2.5 border border-[#313E52] hover:border-none rounded-[10px] flex items-center justify-center ease-out ${isHovered === data.id ? 'bg-white text-mb-gray-550 border-none' : 'bg-[#414D7D40] backdrop-blur-md text-mb-white-100'} transition-all duration-500 ease-in-out`}
+                  className={`sm:self-end min-w-full sm:min-w-[135px] sm:max-w-[300px] px-3 py-2.5 border border-[#313E52] hover:border-none rounded-[10px] flex items-center justify-center ease-out ${isHovered === card.id ? 'bg-white text-mb-gray-550 border-none' : 'bg-[#414D7D40] backdrop-blur-md text-mb-white-100'} transition-all duration-500 ease-in-out`}
                 >
-                  <p className='text-sm font-normal'>{data?.action}</p>
+                  <p className='text-sm font-normal'>{card?.action}</p>
                 </div>
-                {data?.sub && !isMobile && (
+                {card?.sub && !isMobile && (
                   <div className='self-end'>
                     <p className='text-white text-sm font-semibold'>
-                      {data?.sub}
+                      {card?.sub}
                     </p>
                   </div>
                 )}
@@ -165,11 +164,9 @@ export const ExamplesSection = () => {
         <Button
           variant='secondary'
           className='w-full md:w-[200px] text-white hover:text-black bg-[#414D7D40] border border-[#313E52]'
-          onClick={() =>
-            handleCardClick(`${MB_URL.BITTE_WALLET}/new-token-drop`)
-          }
+          onClick={() => handleCardClick(data.btnUrl)}
         >
-          Create your Token Drop
+          {data.btnTitle}
         </Button>
       </div>
     </section>

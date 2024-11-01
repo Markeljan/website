@@ -41,4 +41,6 @@ export const MB_URL = {
   STRIPE: 'https://stripe.com/docs/js',
   NEARCON_MINSTA: 'https://nearcon.mintbase.xyz',
   SMART_ACTIONS_PROMPT: 'https://wallet.bitte.ai/smart-actions/prompt',
+  SMART_ACTIONS: 'https://wallet.bitte.ai/smart-actions',
+  WHITE_PAPER: 'https://docsend.com/view/ngd388tyqh7jhe4y',
 };
