@@ -1,9 +1,6 @@
 'use client';
 
-import {
-  newsletterCardsData,
-  productCardsData,
-} from '@/lib/data/productCardsData';
+import { productCardsData } from '@/lib/data/productCardsData';
 import { ExamplesSection } from './ExamplesSection';
 import { NumbersSection } from './NumbersSection';
 import { PartnersSection } from './PartnersSection';
@@ -11,6 +8,7 @@ import VideoSection from './VideoSection';
 import { ProductCardsSection } from './ProductCardsSection';
 import { SupportedChainsSection } from './SupportedChainsSection';
 import { MB_URL } from '@/lib/url';
+import { newsCardData } from '@/lib/data/dropCardData';
 
 const paymasterSection = {
   thumb: '/video/paymaster-thumb.jpg',
@@ -31,7 +29,7 @@ const crossSection = {
   title: 'Chain Abstraction',
   subHeader: "One account to rule them all, with Gnosis Safe's on EVMs.",
   factTitle: '',
-  fact: 'Coming October 2024',
+  fact: 'Coming Novemebr 2024',
   btnTitle: 'Coming October',
   btnUrl: MB_URL.PAYMASTER,
   isDisabled: true,
@@ -50,8 +48,7 @@ export const HomeComponent = () => {
 
       <NumbersSection />
       <VideoSection {...paymasterSection} />
-
-      <ProductCardsSection data={newsletterCardsData} dim='opacity-50' />
+      <ExamplesSection data={newsCardData} />
       <PartnersSection />
     </>
   );

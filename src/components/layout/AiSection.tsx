@@ -13,9 +13,12 @@ const AiSection = () => {
     setInput(text);
   };
 
-  const goToSmartActions = (message?: string) => {
+  const goToSmartActions = (message?: string, agentId?: string) => {
     const encodedPrompt = encodeURIComponent(message || input);
-    window.open(`${MB_URL.SMART_ACTIONS_PROMPT}/${encodedPrompt}`, '_blank');
+    window.open(
+      `${MB_URL.SMART_ACTIONS_PROMPT}/${encodedPrompt}?agentId=${agentId}`,
+      '_blank'
+    );
   };
 
   return (
@@ -25,7 +28,9 @@ const AiSection = () => {
           <Card
             className='bg-[#414D7D40] border border-[#313E52] hover:border-[#E087FFB2] hover:shadow-custom backdrop-blur supports-[backdrop-filter]:bg-[#414D7D40]/55 min-w-[300px] cursor-pointer transition-all duration-300'
             key={data?.title}
-            onClick={() => goToSmartActions(`${data.title} ${data.sub}`)}
+            onClick={() =>
+              goToSmartActions(`${data.title} ${data.sub}`, data.agentId)
+            }
           >
             <CardContent className='text-left p-5 transition-transform duration-300'>
               <p className='text-mb-white-100 font-semibold'>{data?.title}</p>
