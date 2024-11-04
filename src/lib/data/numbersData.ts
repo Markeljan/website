@@ -7,7 +7,7 @@ export const numbersData = [
   {
     id: 2,
     label: 'Accounts Created',
-    value: '+35.4K',
+    value: '+50K',
   },
   {
     id: 3,
@@ -16,8 +16,8 @@ export const numbersData = [
   },
   {
     id: 4,
-    label: 'Projects Funded',
-    value: '21',
+    label: 'Agents',
+    value: '+500',
   },
   {
     id: 5,
