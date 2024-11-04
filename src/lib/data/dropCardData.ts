@@ -69,7 +69,7 @@ export const dropCardData = {
 };
 
 export const newsCardData = {
-  title: 'Updates',
+  title: 'News',
   btnTitle: 'See Blog',
   btnUrl: 'https://bitteprotocol.substack.com/',
   cards: [

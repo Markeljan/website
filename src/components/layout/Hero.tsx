@@ -13,26 +13,27 @@ const Hero = () => {
 
   return (
     <section className='w-full'>
-      <div className='relative h-screen w-screen`'>
+      <div className='relative w-screen  h-full'>
         <video
           autoPlay
           loop
           playsInline
           muted
-          className='absolute w-screen h-full object-cover border-b border-[#313E52] -top-24'
+          className='absolute w-screen h-full object-cover border-b border-[#313E52] opacity-20'
         >
-          <source src='/video/loop.mp4' type='video/mp4' />
+          <source src='/video/brains.mp4' type='video/mp4' />
         </video>
-        <div className='flex justify-center flex-col text-center items-center px-8 pt-14 md:pt-12 lg:pt-12 xl:pt-24  2xl:pt-40'>
+        <div className='flex justify-center flex-col text-center items-center px-8 pt-14 md:pt-12 lg:pt-12 xl:pt-24  2xl:pt-40  py-28'>
           <div className='z-10 md:pointer-events-none'>
             <p className='font-semibold text-white text-[32px] md:text-[40px] leading-tight mx-auto '>
-              Cross-chain AI Executions
+              Talk with Blockchains Using AI
             </p>
             <p className='text-mb-gray-300 md:text-[22px] font-normal mt-4 leading-tight drop-shadow-2xl'>
-              The first on-chain agent market for AI transaction building
+              On-chain agent market for transaction building with Universal Safe
+              Accounts
             </p>
           </div>
-          <div className='text-center mt-6 z-10'>
+          <div className='text-center mt-6 z-10 '>
             <AiSection />
             <div className='mt-8'>
               <Button

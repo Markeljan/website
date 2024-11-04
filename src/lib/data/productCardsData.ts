@@ -14,7 +14,7 @@ export const productCardsData = {
     {
       id: 2,
       badge: 'Dev Templates',
-      title: 'Fork Templates',
+      title: 'Fork Agent Templates',
       sub: 'Launch NFT apps and AI Agents in minutes.',
       bg: '/examples/templates.jpg',
       link: MB_URL.TEMPLATES_URL,

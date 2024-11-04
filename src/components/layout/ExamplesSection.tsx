@@ -70,7 +70,7 @@ export const ExamplesSection = ({ data = dropCardData }) => {
   }, []);
 
   return (
-    <section className='relative w-screen py-40 overflow-hidden'>
+    <section className='relative w-screen py-20 overflow-hidden'>
       <div className='flex justify-center sm:justify-between items-center mb-10 px-16	'>
         <p
           className={`${fira.className} text-sm text-mb-gray-300 font-normal uppercase`}

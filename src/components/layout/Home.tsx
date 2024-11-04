@@ -38,17 +38,16 @@ const crossSection = {
 export const HomeComponent = () => {
   return (
     <>
-      <div className='z-20'>
-        <ProductCardsSection data={productCardsData} />
-      </div>
+      <SupportedChainsSection />
+      <ProductCardsSection data={productCardsData} />
 
       <ExamplesSection />
+      <ExamplesSection data={newsCardData} />
+
       <VideoSection {...crossSection} />
-      <SupportedChainsSection />
 
       <NumbersSection />
       <VideoSection {...paymasterSection} />
-      <ExamplesSection data={newsCardData} />
       <PartnersSection />
     </>
   );

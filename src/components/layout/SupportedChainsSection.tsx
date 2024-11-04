@@ -34,7 +34,7 @@ export const SupportedChainsSection = () => {
       <p
         className={`${fira.className} text-sm text-mb-gray-300 font-normal text-center uppercase mb-10`}
       >
-        Upcoming Supported Chains
+        Supported Chains
       </p>
       <div className='absolute left-0 top-0 bottom-0 w-16 pointer-events-none bg-gradient-to-r from-black to-transparent z-10'></div>
       <div className='absolute right-0 top-0 bottom-0 w-16 pointer-events-none bg-gradient-to-l from-black to-transparent z-10'></div>
@@ -46,7 +46,7 @@ export const SupportedChainsSection = () => {
         {[...chainData, ...chainData]?.map((data, i) => (
           <Card
             className={`border ${data?.enabled ? 'border-mb-green' : 'border-mb-gray-750'} min-w-[195px] h-[95px] flex flex-col items-center justify-center`}
-            key={`partners-${i}`}
+            key={`chains-${i}`}
           >
             <CardContent className='text-center p-4'>
               <div style={{ transform: `scale(${data.scale})` }}>
@@ -55,7 +55,7 @@ export const SupportedChainsSection = () => {
                   className='object-contain max-h-[60px] max-w-[160px] min-h-[40px] min-w-[140px]'
                   width={160}
                   height={60}
-                  alt={`${data?.id}-logo`}
+                  alt={`${data?.logo}-logo`}
                   loading='lazy'
                 />
               </div>
