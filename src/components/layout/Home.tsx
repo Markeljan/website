@@ -26,13 +26,13 @@ const paymasterSection = {
 const crossSection = {
   thumb: '/video/cross-thumb.jpg',
   src: '/video/cross-chain.mp4',
-  title: 'Chain Abstraction',
-  subHeader: "One account to rule them all, with Gnosis Safe's on EVMs.",
+  title: 'Universal Accounts with Chain Abstraction',
+  subHeader: "One account to rule them all, with ERC-4337 Safe's on EVMs.",
   factTitle: '',
-  fact: 'Coming Novemebr 2024',
-  btnTitle: 'Coming October',
-  btnUrl: MB_URL.PAYMASTER,
-  isDisabled: true,
+  fact: '',
+  btnTitle: 'Try Now',
+  btnUrl: MB_URL.BITTE_WALLET,
+  isDisabled: false,
 };
 
 export const HomeComponent = () => {
