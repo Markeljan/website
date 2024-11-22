@@ -11,7 +11,7 @@ export const NumbersSection = () => {
         >
           The Numbers
         </p>
-        <video
+        {/* <video
           autoPlay
           playsInline
           loop
@@ -19,7 +19,7 @@ export const NumbersSection = () => {
           className='absolute object-cover w-screen h-full top-0 right-0 left-0 -z-20'
         >
           <source src='/video/lights.mp4' type='video/mp4' />
-        </video>
+        </video> */}
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 z-20 lg:px-12 xl:px-64'>
           {numbersData?.map((data) => (

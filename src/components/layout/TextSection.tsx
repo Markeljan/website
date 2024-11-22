@@ -1,9 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 
-const VideoSection = ({
-  thumb,
-  src,
+const TextSection = ({
   title,
   subHeader,
   factTitle,
@@ -12,8 +10,6 @@ const VideoSection = ({
   btnUrl,
   isDisabled,
 }: {
-  thumb: string;
-  src: string;
   title: string;
   subHeader: string;
   factTitle: string;
@@ -24,23 +20,11 @@ const VideoSection = ({
 }) => {
   return (
     <div className='p-5 sm:w-full md:w-5/6 lg:w-4/6 my-5 md:my-40'>
-      <div className='video-responsive flex justify-center '>
-        <video
-          poster={thumb}
-          controls
-          playsInline
-          muted={false}
-          className='w-screen h-full object-cover rounded-lg border border-[#313E52]'
-        >
-          <source src={src} type='video/mp4' />
-        </video>
-      </div>
-
       <div className='text-center md:my-11 w-full'>
-        <p className='pt-6 font-semibold text-white text-[32px] md:text-[40px] leading-tight  mx-auto  '>
+        <p className='pt-6 font-semibold text-white text-[32px] md:text-[40px] leading-tight mx-auto max-w-[400px]'>
           {title}
         </p>
-        <p className='text-mb-gray-300 md:text-[20px] font-normal mt-4 leading-tight mx-auto px-5 max-w-[780px]'>
+        <p className='text-mb-gray-300 md:text-[20px] font-normal mt-4 leading-tight mx-auto px-5 max-w-[650px]'>
           {subHeader}
         </p>
         <div className='mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 z-10  drop-shadow-xl'>
@@ -66,4 +50,4 @@ const VideoSection = ({
   );
 };
 
-export default VideoSection;
+export default TextSection;

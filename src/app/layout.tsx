@@ -9,6 +9,8 @@ import { Inter } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 
+import { Providers } from '@/components/layout/AppProvider';
+
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -48,21 +50,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='overflow-x-hidden'>
-      <head>
-        <meta
-          name='google-site-verification'
-          content='L_YAA1wl9HK-pwje3STY_KyHj7yQN1oTfq09H_r9Kqw'
-        />
-      </head>
-      <body className={`${inter.className} dark bg-black`}>
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-        <NextTopLoader color='#334155' showSpinner={false} height={4} />
-        <SpeedInsights />
-      </body>
-    </html>
+    <Providers>
+      <html lang='en' className='overflow-x-hidden'>
+        <head>
+          <meta
+            name='google-site-verification'
+            content='L_YAA1wl9HK-pwje3STY_KyHj7yQN1oTfq09H_r9Kqw'
+          />
+        </head>
+        <body className={`${inter.className} dark bg-black`}>
+          <Header />
+          {children}
+          <Footer />
+          <Analytics />
+          <NextTopLoader color='#334155' showSpinner={false} height={4} />
+          <SpeedInsights />
+        </body>
+      </html>
+    </Providers>
   );
 }
