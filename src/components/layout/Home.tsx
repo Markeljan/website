@@ -10,6 +10,12 @@ import { SupportedChainsSection } from './SupportedChainsSection';
 import { MB_URL } from '@/lib/url';
 import { newsCardData } from '@/lib/data/dropCardData';
 import { AgentSection } from './AgentSection';
+import { BitteAssistantConfig } from '@/lib/data/useAgentData';
+
+export type AgentData = {
+  agents: BitteAssistantConfig[];
+  unverifiedAgents: BitteAssistantConfig[];
+};
 
 const paymasterSection = {
   title: 'Any API can become an AI agent',
@@ -32,12 +38,12 @@ const crossSection = {
   isDisabled: false,
 };
 
-export const HomeComponent = () => {
+export const HomeComponent = ({ agentData }: { agentData: AgentData }) => {
   return (
     <>
       <SupportedChainsSection />
       <TextSection {...crossSection} />
-      <AgentSection />
+      <AgentSection agentData={agentData} />
       <ProductCardsSection data={productCardsData} />
 
       <ExamplesSection />

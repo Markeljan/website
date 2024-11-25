@@ -1,16 +1,13 @@
 import { fira } from '@/app/fonts';
-import { chainData } from '@/lib/data/chainData';
-import Image from 'next/image';
+/* import Image from 'next/image'; */
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '../ui/card';
-import { useAgentsData } from '@/lib/data/useAgentData';
+import { AgentData } from './Home';
 
-export const AgentSection = () => {
+export const AgentSection = ({ agentData }: { agentData: AgentData }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const { agentsData, agentsDataError, agentsDataLoading } = useAgentsData({});
-
-  console.log('AGENT DATA', agentsData);
+  console.log('AI ASS DATA', agentData);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -48,8 +45,7 @@ export const AgentSection = () => {
         ref={scrollContainerRef}
         style={{ scrollBehavior: 'auto' }}
       >
-        {[...agentsData, ...agentsData]?.map((data, i) => (
-          <Card
+        {/* <Card
             className={`border ${data?.enabled ? 'border-mb-green' : 'border-mb-gray-750'} min-w-[195px] h-[95px] flex flex-col items-center justify-center`}
             key={`partners-${i}`}
           >
@@ -57,6 +53,21 @@ export const AgentSection = () => {
               <div style={{ transform: `scale(${data?.scale})` }}>
                 <Image
                   src={data?.image}
+                  className='object-contain max-h-[60px] max-w-[160px] min-h-[40px] min-w-[140px]'
+                  width={160}
+                  height={60}
+                  alt={`${data?.id}-logo`}
+                  loading='lazy'
+                />
+              </div>
+            </CardContent>
+          </Card> */}
+        {agentData.agents?.map((data, i) => (
+          <Card key={i}>
+            <CardContent className='text-center p-4'>
+              <div>
+                <img
+                  src={data?.image || ''}
                   className='object-contain max-h-[60px] max-w-[160px] min-h-[40px] min-w-[140px]'
                   width={160}
                   height={60}
