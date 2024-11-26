@@ -9,17 +9,21 @@ const TextSection = ({
   btnTitle,
   btnUrl,
   isDisabled,
+  noSpacing,
 }: {
   title: string;
   subHeader: string;
-  factTitle: string;
-  fact: string;
-  btnTitle: string;
-  btnUrl: string;
-  isDisabled: boolean;
+  factTitle?: string;
+  fact?: string;
+  btnTitle?: string;
+  btnUrl?: string;
+  isDisabled?: boolean;
+  noSpacing?: boolean;
 }) => {
   return (
-    <div className='p-5 sm:w-full md:w-5/6 lg:w-4/6 my-5 md:my-40'>
+    <div
+      className={`p-5 sm:w-full md:w-5/6 lg:w-4/6 ${noSpacing ? '' : 'my-5 md:my-40'}`}
+    >
       <div className='text-center md:my-11 w-full'>
         <p className='pt-6 font-semibold text-white text-[32px] md:text-[40px] leading-tight mx-auto max-w-[400px]'>
           {title}
@@ -31,7 +35,7 @@ const TextSection = ({
           <p className='font-normal text-white z-10'>{factTitle}</p>
           <span className='font-semibold text-[24px] text-white'>{fact}</span>
         </div>
-        {isDisabled === false && (
+        {!isDisabled && btnTitle && btnUrl && (
           <div className='mt-8 flex justify-center'>
             <Button
               variant='secondary'

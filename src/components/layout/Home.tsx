@@ -7,7 +7,6 @@ import { PartnersSection } from './PartnersSection';
 import TextSection from './TextSection';
 import { ProductCardsSection } from './ProductCardsSection';
 import { SupportedChainsSection } from './SupportedChainsSection';
-import { MB_URL } from '@/lib/url';
 import { newsCardData } from '@/lib/data/dropCardData';
 import { AgentSection } from './AgentSection';
 import { BitteAssistantConfig } from '@/lib/data/useAgentData';
@@ -23,19 +22,17 @@ const paymasterSection = {
     'Explore existing agents or create your own. We make it simple to infuse AI capabilities into any API.',
   factTitle: 'Sponsored Relays',
   fact: '+250k',
-  btnTitle: 'Sponsor Now',
-  btnUrl: MB_URL.PAYMASTER,
   isDisabled: false,
 };
 
 const crossSection = {
-  title: 'Universal Accounts with Chain Abstraction',
-  subHeader: "One account to rule them all, with ERC-4337 Safe's on EVMs.",
+  title: 'Any API can become an AI agent',
+  subHeader:
+    'Explore existing agents or create your own. We make it simple to infuse AI capabilities into any API.',
   factTitle: '',
   fact: '',
-  btnTitle: 'Try Now',
-  btnUrl: MB_URL.BITTE_WALLET,
   isDisabled: false,
+  noSpacing: true,
 };
 
 export const HomeComponent = ({ agentData }: { agentData: AgentData }) => {

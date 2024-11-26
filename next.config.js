@@ -14,6 +14,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'bitte-agent.vercel.app',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
