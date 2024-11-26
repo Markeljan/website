@@ -27,7 +27,7 @@ export const ProductCardsSection = ({
       <div className='flex lg:flex-row flex-col itmes-center justify-center gap-6'>
         {data.cards.map((data) => (
           <Card
-            className='bg-black border border-[#313E52] w-full lg:w-2/3 h-[350px] relative overflow-hidden hover:border-[#E087FFB2] hover:shadow-custom transition-all duration-300 cursor-pointer'
+            className='bg-black border border-[#313E52] w-full lg:w-2/3 h-full md:h-[350px] relative overflow-hidden hover:border-[#E087FFB2] hover:shadow-custom transition-all duration-300 cursor-pointer'
             key={data?.id}
             onMouseEnter={() => setIsHovered(data.id)}
             onMouseLeave={() => setIsHovered(null)}
@@ -41,7 +41,7 @@ export const ProductCardsSection = ({
                   loading='lazy'
                   height={232}
                   width={415}
-                  className={`absolute inset-0 w-full h-full object-cover ${dim}`}
+                  className={`w-full md:w-1/2 md:absolute md:right-0 md:top-0 h-1/2 md:h-full object-cover md:object-contain ${dim}`}
                 />
               ) : (
                 <video
@@ -53,13 +53,15 @@ export const ProductCardsSection = ({
                   <source src={data.bg} type='video/mp4' />
                 </video>
               ))}
-            <CardContent className='p-6 flex flex-col items-center justify-between gap-6 xl:gap-12 relative overflow-hidden w-full h-full'>
-              <span
-                className={`${fira.className} bg-[#414D7D33] backdrop-blur-md rounded-full text-white uppercase text-xs py-1.5 px-5`}
-              >
-                {data?.badge}
-              </span>
-              <div className='text-center'>
+            <CardContent className='p-6 flex flex-col items-center md:items-start justify-between gap-6 xl:gap-12 relative overflow-hidden w-full h-full'>
+              <div>
+                <span
+                  className={`${fira.className} bg-[#C084FC33] backdrop-blur-md rounded-full text-[#C084FC] uppercase text-xs py-1.5 px-5`}
+                >
+                  {data?.badge}
+                </span>
+              </div>
+              <div className='max-w-[366px]'>
                 <p className='text-mb-white-100 font-semibold mb-2 text-[23px]'>
                   {data?.title}
                 </p>
@@ -67,12 +69,17 @@ export const ProductCardsSection = ({
                   {data?.sub}
                 </p>
               </div>
-              <a href={data?.link} rel='noopener noreferrer' target='_blank'>
+              <a
+                href={data?.link}
+                rel='noopener noreferrer'
+                target='_blank'
+                className='w-full'
+              >
                 <Button
-                  variant='card'
-                  className={`w-[135px] z-[52] ${isHovered === data.id ? 'scale-105 text-mb-gray-550 bg-white' : ''}`}
+                  variant='default'
+                  className={`w-full md:w-[200px] z-[52] ${isHovered === data.id ? 'scale-105' : ''}`}
                 >
-                  Visit
+                  {data?.btn_text}
                 </Button>
               </a>
             </CardContent>

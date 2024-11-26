@@ -24,7 +24,7 @@ const TextSection = ({
     <div
       className={`p-5 sm:w-full md:w-5/6 lg:w-4/6 ${noSpacing ? '' : 'my-5 md:my-40'}`}
     >
-      <div className='text-center md:my-11 w-full'>
+      <div className='text-center w-full'>
         <p className='pt-6 font-semibold text-white text-[32px] md:text-[40px] leading-tight mx-auto max-w-[400px]'>
           {title}
         </p>
