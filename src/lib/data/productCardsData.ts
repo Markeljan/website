@@ -13,11 +13,11 @@ export const productCardsData = {
     },
     {
       id: 2,
-      badge: 'Dev Templates',
-      title: 'Fork Agent Templates',
-      sub: 'Launch NFT apps and AI Agents in minutes.',
+      badge: 'Agent Registry',
+      title: 'Browse Agent Registry',
+      sub: 'Find and launch agents in minutes',
       bg: '/examples/templates.jpg',
-      link: MB_URL.TEMPLATES_URL,
+      link: '/registry',
     },
     {
       id: 3,
