@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchApi } from '../utils/fetchService';
-import { AssistantTool, FunctionTool } from 'openai/resources/beta/assistants';
+import { FunctionTool } from 'openai/resources/beta/assistants';
 import { FunctionDefinition } from 'openai/resources/index';
 import { HttpMethod } from '../constants';
 
