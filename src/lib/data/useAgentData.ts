@@ -47,6 +47,7 @@ const getAgentImage = (agentId: string) => {
   return TEMP_AGENT_ID_IMAGE_MAP[agentId] || '/bitte-symbol-black.svg';
 };
 
+//TO DO REMOVE THIS FETCH & SERVICE
 const getAgents = ({
   agentId,
   filterVerified,
