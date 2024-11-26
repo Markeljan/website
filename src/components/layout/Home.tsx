@@ -9,7 +9,7 @@ import { ProductCardsSection } from './ProductCardsSection';
 import { SupportedChainsSection } from './SupportedChainsSection';
 import { newsCardData } from '@/lib/data/dropCardData';
 import { AgentSection } from './AgentSection';
-import { BitteAssistantConfig } from '@/lib/data/useAgentData';
+import { BitteAssistantConfig } from '@/lib/api/ai-agents/getAiAgents';
 
 export type AgentData = {
   agents: BitteAssistantConfig[];

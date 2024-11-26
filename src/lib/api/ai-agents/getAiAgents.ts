@@ -32,6 +32,22 @@ export type ExecutionDefinition = {
   httpMethod: string;
 };
 
+const TEMP_AGENT_ID_IMAGE_MAP: Record<string, string> = {
+  ['bitte-assistant']: '/bitte-symbol-black.svg',
+  ['bitte-wasmer-agent.fly.dev']: '/wasmer.webp',
+  ['coingecko-ai.vercel.app']: '/coingecko.svg',
+  ['near-safe-agent.vercel.app']: '/safe.svg',
+  ['potlockaiagent-hqd5dzcjajhpc3fa.eastus-01.azurewebsites.net']:
+    '/potlock.ico',
+  ['ref-finance-agent.vercel.app']: '/ref.svg',
+  ['near-cow-agent.vercel.app']: '/cowswap.svg',
+  ['staking-agent.intear.tech']: '/near-chain.svg',
+};
+
+export const getAgentImage = (agentId: string) => {
+  return TEMP_AGENT_ID_IMAGE_MAP[agentId] || '/bitte-symbol-black.svg';
+};
+
 export const getAssistants = async (): Promise<{
   agents: BitteAssistantConfig[];
   unverifiedAgents: BitteAssistantConfig[];
