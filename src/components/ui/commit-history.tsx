@@ -98,9 +98,9 @@ export default function GitCommitHistory({ repoUrl }: GitCommitHistoryProps) {
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
           <GitCommit className='h-6 w-6' />
-          Git Commit History
+          Agent Development History
         </CardTitle>
-        <CardDescription>Recent commits to the main branch</CardDescription>
+        <CardDescription>Recent Commits to Agent Repository</CardDescription>
       </CardHeader>
       <CardContent>
         <ul className='space-y-4'>
