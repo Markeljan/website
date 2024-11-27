@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -22,11 +21,7 @@ const Filters = ({
   if (!filters?.length) return null;
 
   return (
-    <Accordion
-      type='single'
-      className='text-mb-gray-200'
-      collapsible
-    >
+    <Accordion type='single' className='text-mb-gray-200' collapsible>
       {filters.map((filter, index) => {
         const selectedAmount = selectedFilters?.filter(
           (selectedFilter) => selectedFilter.label === filter.label

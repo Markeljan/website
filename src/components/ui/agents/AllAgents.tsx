@@ -88,7 +88,15 @@ const AllAgents = ({
                 <div className='border-b border-mb-gray-500 p-6 bg-mb-gray-550 w-auto'>
                   <DialogTitle>Filters</DialogTitle>
                 </div>
-                <div className='p-6 h-[80vh] overflow-scroll'>
+                <div className='flex items-center justify-between p-4'>
+                  <Label htmlFor='playground-mode-mobile'>Playground</Label>
+                  <Switch
+                    id='playground-mode-mobile'
+                    checked={playgroundMode}
+                    onCheckedChange={setPlaygroundMode}
+                  />
+                </div>
+                <div className='p-6 h-[70vh] overflow-scroll'>
                   <Filters
                     filters={filters}
                     selectedFilters={selectedFilters}
