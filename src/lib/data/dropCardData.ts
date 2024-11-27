@@ -69,8 +69,66 @@ export const dropCardData = {
 };
 
 export const newsCardData = {
-  title: 'News',
-  btnTitle: 'See Blog',
+  title: 'In the News',
+  btnTitle: 'Blog',
+  btnUrl: 'https://bitteprotocol.substack.com/',
+  cards: [
+    {
+      id: 1,
+      badge: 'Vision',
+      action: 'White Paper Announced',
+      sub: '214 claims',
+      bg: '/examples/white-paper.jpg',
+      link: `https://x.com/BitteProtocol/status/1851958139978957072`,
+      isSA: false,
+      gradientLayer: true,
+    },
+    {
+      id: 2,
+      badge: 'Agent Onbording',
+      action: 'Agent Selector Playground Launched',
+      sub: '',
+      bg: '/examples/early-days.jpg',
+      link: 'https://open.substack.com/pub/bitteprotocol/p/ai-powered-universal-accounts?r=2m5r3b&utm_campaign=post&utm_medium=web',
+      isSA: true,
+      gradientLayer: true,
+    },
+    {
+      id: 2,
+      badge: 'Vision',
+      action: 'Early Days for AI Agents',
+      sub: '',
+      bg: '/examples/up-graph.jpg',
+      link: 'https://open.substack.com/pub/bitteprotocol/p/early-days-for-ai-agents?r=2m5r3b&utm_campaign=post&utm_medium=web',
+      isSA: true,
+      gradientLayer: true,
+    },
+    {
+      id: 3,
+      badge: 'Partnerships',
+      action: 'FKA Twigs',
+      sub: '',
+      bg: '/examples/twigs.jpg',
+      link: 'https://open.substack.com/pub/bitteprotocol/p/the-eleven-collection-by-fka-twigs?r=2m5r3b&utm_campaign=post&utm_medium=web',
+      isSA: false,
+      gradientLayer: true,
+    },
+    {
+      id: 3,
+      badge: 'Partnerships',
+      action: 'ICC branded login powered by Bitte Wallet',
+      sub: '',
+      bg: '/examples/letter-cricket.jpg',
+      link: 'https://open.substack.com/pub/bitteprotocol/p/cricket-crypto-icc-branded-login?r=2m5r3b&utm_campaign=post&utm_medium=web',
+      isSA: false,
+      gradientLayer: true,
+    },
+  ],
+};
+
+export const videosCardData = {
+  title: 'Videos',
+  btnTitle: 'View Channel',
   btnUrl: 'https://bitteprotocol.substack.com/',
   cards: [
     {

@@ -105,7 +105,7 @@ export const AgentSection = ({ agentData }: { agentData: AgentData }) => {
           </Card>
         ))}
       </div>
-      <div className='mt-11 flex items-center justify-center gap-6'>
+      <div className='mt-11 flex items-center justify-center gap-3 md:gap-6'>
         <Button
           variant='default'
           className='w-full md:w-[200px]'

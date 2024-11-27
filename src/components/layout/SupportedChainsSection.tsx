@@ -45,7 +45,7 @@ export const SupportedChainsSection = () => {
       >
         {[...chainData, ...chainData]?.map((data, i) => (
           <Card
-            className={`border ${data?.enabled ? 'border-mb-green' : 'border-mb-gray-750'} min-w-[195px] h-[95px] flex flex-col items-center justify-center`}
+            className={`border border-[#313E52] min-w-[195px] h-[95px] flex flex-col items-center justify-center`}
             key={`chains-${i}`}
           >
             <CardContent className='text-center p-4'>

@@ -8,6 +8,7 @@ import TextSection from './TextSection';
 import { ProductCardsSection } from './ProductCardsSection';
 import { SupportedChainsSection } from './SupportedChainsSection';
 import { newsCardData } from '@/lib/data/dropCardData';
+import { videosCardData } from '@/lib/data/dropCardData';
 import { AgentSection } from './AgentSection';
 import { BitteAssistantConfig } from '@/lib/api/ai-agents/getAiAgents';
 
@@ -20,9 +21,10 @@ const paymasterSection = {
   title: 'Any API can become an AI agent',
   subHeader:
     'Explore existing agents or create your own. We make it simple to infuse AI capabilities into any API.',
-  factTitle: 'Sponsored Relays',
-  fact: '+250k',
+  factTitle: '',
+  fact: '',
   isDisabled: false,
+  noSpacing: true,
 };
 
 const crossSection = {
@@ -46,6 +48,7 @@ export const HomeComponent = ({ agentData }: { agentData: AgentData }) => {
       <ExamplesSection />
       <TextSection {...paymasterSection} />
       <ExamplesSection data={newsCardData} />
+      <ExamplesSection data={videosCardData} />
 
       <NumbersSection />
       <PartnersSection />

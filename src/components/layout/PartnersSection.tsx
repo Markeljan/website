@@ -30,7 +30,7 @@ export const PartnersSection = () => {
   }, []);
 
   return (
-    <section className='relative my-40 pb-10 md:pb-40'>
+    <section className='relative my-40'>
       <p
         className={`${fira.className} text-sm text-mb-gray-300 font-normal text-center uppercase mb-10`}
       >
