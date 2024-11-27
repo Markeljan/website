@@ -38,9 +38,11 @@ export function Calendar({ record }: CalendarProps) {
   };
 
   return (
-    <Card className='w-full'>
+    <Card className='w-full border border-[#313E52]'>
       <CardHeader className='pb-2'>
-        <CardTitle className='text-lg font-normal'>Agent Pings</CardTitle>
+        <CardTitle className='text-lg font-normal pb-3 text-[#CBD5E1]'>
+          Agent Pings
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <ActivityCalendar data={allDates} theme={explicitTheme} />

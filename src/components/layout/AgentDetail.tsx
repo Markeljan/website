@@ -22,8 +22,7 @@ export const AgentDetailComponent = ({
         <div className='w-full md:w-1/3 h-auto'>
           <DetailsSideBar {...{ agent }} />
         </div>
-        <div className='w-full md:w-2/3 py-[22px] md:py-[88px]'>
-
+        <div className='w-full md:w-2/3 my-6 md:my-16'>
           <div className='markdownBody'>
             <MarkdownBody
               data={agent?.generatedDescription || agent.description || ''}
@@ -33,7 +32,7 @@ export const AgentDetailComponent = ({
           {pings && (
             <>
               <div className='grid gap-4 md:grid-cols-3 my-8'>
-                <Card className='border-[#2A2A2A]'>
+                <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
                     <div className='text-sm text-gray-400'>Total Pings</div>
                     <div className='text-2xl font-bold text-white'>
@@ -44,7 +43,7 @@ export const AgentDetailComponent = ({
                     </div>
                   </CardContent>
                 </Card>
-                <Card className='border-[#2A2A2A]'>
+                <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
                     <div className='text-sm text-gray-400'>Daily Average</div>
                     <div className='text-2xl font-bold text-white'>
@@ -57,7 +56,7 @@ export const AgentDetailComponent = ({
                     </div>
                   </CardContent>
                 </Card>
-                <Card className='border-[#2A2A2A]'>
+                <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
                     <div className='text-sm text-gray-400'>Last 7 Days</div>
                     <div className='text-2xl font-bold text-white'>
@@ -77,7 +76,7 @@ export const AgentDetailComponent = ({
                 <Calendar record={pings} />
               </div>
               <div className='my-8'>
-                <GitCommitHistory repoUrl={agent.repoUrl}/>
+                <GitCommitHistory repoUrl={agent.repoUrl} />
               </div>
             </>
           )}

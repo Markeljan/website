@@ -14,7 +14,7 @@ export const RegistryUI = ({
   filters: Filters[];
 }) => {
   return (
-    <div className='container-home -mt-28 md:-mt-16 z-20'>
+    <div className='container z-20 m-auto'>
       <RegistryBanner />
       <AgentStarterCard />
       <AllAgents

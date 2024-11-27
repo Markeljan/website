@@ -5,7 +5,7 @@ export default async function Registry() {
   const data = await getAssistants();
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-6 md:p-24 bg-mb-black'>
+    <main className='flex flex-col items-center justify-between'>
       {data ? (
         <RegistryUI
           agents={data.agents}
