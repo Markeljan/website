@@ -4,6 +4,7 @@ import { RegistryData } from '@/lib/types/agent.types';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { ActionLink } from './ActionLink';
+import { MB_URL } from '@/lib/url';
 
 export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
   if (!agent) return null;
@@ -29,8 +30,56 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
           {agent.name}
         </h1>
       </div>
-      <div className='mt-10'>
+      <div className='lg:hidden flex items-center gap-3 w-full mt-10'>
+        {agent.repoUrl ? (
+          <Link
+            className='w-full'
+            href={agent.repoUrl}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Button variant='secondary' className='w-full'>
+              Contribute
+            </Button>
+          </Link>
+        ) : null}
+        <Link
+          target='_blank'
+          rel='noreferrer'
+          className='w-full'
+          href={`${MB_URL.SMART_ACTIONS_PROMPT}?agentId=${agent.id}`}
+        >
+          <Button variant='default' className='w-full'>
+            Run Agent
+          </Button>
+        </Link>
+      </div>
+      <div className='mt-10 md:my-10'>
         <ActionLink agent={agent} />
+      </div>
+      <div className='hidden lg:flex items-center gap-3 w-full'>
+        {agent.repoUrl ? (
+          <Link
+            className='w-full'
+            href={agent.repoUrl}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Button variant='secondary' className='w-full'>
+              Contribute
+            </Button>
+          </Link>
+        ) : null}
+        <Link
+          target='_blank'
+          rel='noreferrer'
+          className='w-full'
+          href={`${MB_URL.SMART_ACTIONS_PROMPT}?agentId=${agent.id}`}
+        >
+          <Button variant='default' className='w-full'>
+            Run Agent
+          </Button>
+        </Link>
       </div>
     </aside>
   );
