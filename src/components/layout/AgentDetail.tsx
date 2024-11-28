@@ -34,7 +34,9 @@ export const AgentDetailComponent = ({
               <div className='grid gap-4 md:grid-cols-3 my-8'>
                 <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
-                    <div className='text-sm text-gray-400'>Total Pings</div>
+                    <div className='text-sm text-gray-400 mb-2'>
+                      Total Pings
+                    </div>
                     <div className='text-2xl font-bold text-white'>
                       {Object.values(pings).reduce(
                         (sum, count) => sum + count,
@@ -45,7 +47,9 @@ export const AgentDetailComponent = ({
                 </Card>
                 <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
-                    <div className='text-sm text-gray-400'>Daily Average</div>
+                    <div className='text-sm text-gray-400 mb-2'>
+                      Daily Average
+                    </div>
                     <div className='text-2xl font-bold text-white'>
                       {Math.round(
                         Object.values(pings).reduce(
@@ -58,7 +62,9 @@ export const AgentDetailComponent = ({
                 </Card>
                 <Card className='border border-[#313E52]'>
                   <CardContent className='p-6'>
-                    <div className='text-sm text-gray-400'>Last 7 Days</div>
+                    <div className='text-sm text-gray-400 mb-2'>
+                      Last 7 Days
+                    </div>
                     <div className='text-2xl font-bold text-white'>
                       {Object.entries(pings)
                         .sort(

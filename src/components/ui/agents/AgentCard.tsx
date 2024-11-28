@@ -64,7 +64,7 @@ const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
                 </div>
               </div>
             </div>
-            <div className='flex lg:hidden items-center justify-between mt-2'>
+            <div className='flex lg:hidden items-center justify-between mt-5'>
               <Button
                 variant='secondary'
                 className={agent?.id === 'simple-token-drop' ? 'hidden' : ''}

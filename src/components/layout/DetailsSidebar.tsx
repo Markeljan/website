@@ -25,7 +25,9 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
             className='rounded-sm'
           />
         </div>
-        <h1 className='text-4xl w-auto font-semibold'>{agent.name}</h1>
+        <h1 className='text-2xl md:text-3xl w-auto font-semibold'>
+          {agent.name}
+        </h1>
       </div>
       <div className='mt-10'>
         <ActionLink agent={agent} />

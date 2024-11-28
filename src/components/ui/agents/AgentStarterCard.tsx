@@ -39,7 +39,11 @@ export const AgentStarterCard = (): JSX.Element => {
                   </div>
                 </div>
                 <div className='hidden lg:flex items-center gap-4'>
-                  <Button variant='default' className='bg-mb-blue'>
+                  <Button
+                    variant='card'
+                    className='bg-mb-blue w-[140px]'
+                    size='lg'
+                  >
                     Start
                   </Button>
                 </div>
@@ -54,8 +58,8 @@ export const AgentStarterCard = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className='flex lg:hidden items-center justify-center mt-2'>
-                <Button variant='default' className='bg-mb-blue'>
+              <div className='flex lg:hidden items-center justify-center mt-5'>
+                <Button variant='card' className='bg-mb-blue w-full' size='lg'>
                   Start
                 </Button>
               </div>

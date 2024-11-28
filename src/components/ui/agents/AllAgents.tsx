@@ -56,7 +56,7 @@ const AllAgents = ({
       : templates;
 
   return (
-    <section className='mt-12 md:mt-24 w-full'>
+    <section className='my-12 md:my-24 w-full'>
       <p className='text-mb-gray-200 text-[20px] md:text-[24px] font-semibold my-8'>
         Find agents
       </p>

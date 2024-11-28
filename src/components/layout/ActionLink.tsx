@@ -6,7 +6,6 @@ import { buttonVariants } from '../ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RegistryData } from '@/lib/types/agent.types';
 
-
 export const ActionLink = ({ agent }: { agent: RegistryData }): JSX.Element => {
   const buttonCss = `flex p-0 repository-link ${buttonVariants({
     variant: 'link',
@@ -45,14 +44,16 @@ export const ActionLink = ({ agent }: { agent: RegistryData }): JSX.Element => {
 
       <li className='w-full flex mb-5'>
         <div className='text-mb-gray-200 text-sm'>Publisher</div>
-        <div className='text-right text-sm ml-auto'>
+        <div className='text-right text-sm ml-auto font-semibold'>
           {agent.publisher || 'Bitte'}
         </div>
       </li>
 
       <li className='w-full flex mb-5'>
         <div className='text-mb-gray-200 text-sm'>Id</div>
-        <div className='text-right text-sm ml-auto'>{agent.id}</div>
+        <div className='text-right text-sm ml-auto font-semibold'>
+          {agent.id}
+        </div>
       </li>
 
       <li className='w-full flex mb-5'>
