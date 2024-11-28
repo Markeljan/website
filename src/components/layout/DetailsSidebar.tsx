@@ -47,7 +47,7 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
           target='_blank'
           rel='noreferrer'
           className='w-full'
-          href={`${MB_URL.SMART_ACTIONS_PROMPT}?agentId=${agent.id}`}
+          href={`${MB_URL.SMART_ACTIONS}?agentId=${agent.id}`}
         >
           <Button variant='default' className='w-full'>
             Run Agent
@@ -74,7 +74,7 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
           target='_blank'
           rel='noreferrer'
           className='w-full'
-          href={`${MB_URL.SMART_ACTIONS_PROMPT}?agentId=${agent.id}`}
+          href={`${MB_URL.SMART_ACTIONS}?agentId=${agent.id}`}
         >
           <Button variant='default' className='w-full'>
             Run Agent
