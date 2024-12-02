@@ -14,8 +14,8 @@ export const productCardsData = {
     {
       id: 2,
       badge: 'Agent Registry',
-      title: 'Browse Agent Registry',
-      sub: 'Find and launch agents in minutes',
+      title: 'Agent Registry',
+      sub: 'Fork other agents to make them better or bootstrap your own.',
       bg: '/examples/templates.jpg',
       link: '/registry',
     },
