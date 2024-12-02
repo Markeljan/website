@@ -8,6 +8,11 @@ import { MB_URL } from '@/lib/url';
 
 export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
   if (!agent) return null;
+  const coverImage = agent?.coverImage
+    ? agent.coverImage.startsWith('http')
+      ? agent.coverImage
+      : `/${agent.coverImage.replace(/^\//, '')}`
+    : '/logo.svg';
 
   return (
     <aside className='sticky py-6 md:py-16 top-0'>
@@ -21,7 +26,7 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
         <div className='w-[75px] h-[75px] relative aspect-square shrink-0'>
           <Image
             alt={agent.name}
-            src={agent.coverImage || '/bitte-avatar.svg'}
+            src={coverImage}
             fill={true}
             className='rounded-sm'
           />
@@ -39,7 +44,7 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
             rel='noreferrer'
           >
             <Button variant='secondary' className='w-full'>
-              Contribute
+              Fork Agent
             </Button>
           </Link>
         ) : null}
@@ -66,7 +71,7 @@ export const DetailsSideBar = ({ agent }: { agent: RegistryData }) => {
             rel='noreferrer'
           >
             <Button variant='secondary' className='w-full'>
-              Contribute
+              Fork Agent
             </Button>
           </Link>
         ) : null}
