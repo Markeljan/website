@@ -48,12 +48,9 @@ const Header = () => {
                     <ListItem href={MB_URL.BITTE_WALLET} title='AI Wallet'>
                       Sponsored AI transaction builder with drops.
                     </ListItem>
-                    <ListItem
-                      href={MB_URL.TEMPLATES_URL}
-                      title='Developer Templates'
-                    >
-                      Launch cutting-edge Web3 experience with ready made
-                      templates in minutes.
+                    <ListItem href={MB_URL.REGISTRY} title='Agent Registry'>
+                      Fork other agents to make them better or bootstrap your
+                      own.
                     </ListItem>
                     <ListItem href={MB_URL.MINTBASE_OMNI} title='Marketplace'>
                       Discover, create, and sell NFTs on NEAR.
@@ -116,7 +113,8 @@ const Header = () => {
                   target='_blank'
                   href={MB_URL.BITTE_WALLET}
                 >
-                  Create Wallet <ArrowUpRight size={12} color='#000000' />
+                  Login / Create Wallet{' '}
+                  <ArrowUpRight size={12} color='#000000' />
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
