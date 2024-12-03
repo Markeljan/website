@@ -30,6 +30,7 @@ export const AgentStarterCard = (): JSX.Element => {
                       alt='Agent Starter'
                       fill={true}
                       className='rounded-sm'
+                      unoptimized
                     />
                   </div>
                   <div className='xl:w-[124px]'>
