@@ -35,14 +35,25 @@ const Hero = () => {
           </div>
           <div className='text-center mt-6 z-10 '>
             <AiSection />
-            <div className='mt-8'>
-              <Button
-                variant='outline'
-                className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
-                onClick={() => handleCardClick(`${MB_URL.DEV_DOCS}`)}
-              >
-                Build a Chain Agent
-              </Button>
+            <div className='flex justify-center'>
+              <div className='mt-8 mr-5'>
+                <Button
+                  variant='outline'
+                  className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
+                  onClick={() => handleCardClick(`${MB_URL.DEV_DOCS}`)}
+                >
+                  Build Chain Agent
+                </Button>
+              </div>
+              <div className='mt-8'>
+                <Button
+                  variant='outline'
+                  className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
+                  onClick={() => handleCardClick(`${MB_URL.REGISTRY}`)}
+                >
+                  Agent Registry
+                </Button>
+              </div>
             </div>
           </div>
         </div>

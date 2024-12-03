@@ -14,12 +14,11 @@ export const productCardsData = {
     },
     {
       id: 2,
-      badge: 'Agents',
-      title: 'Browse and run AI Agents. Develop your own.',
-      sub: 'No app install, non custodial, passkey powered and sponsored transactions. ',
-      bg: '/examples/image_39.svg',
-      btn_text: 'Agents',
-      link: MB_URL.TEMPLATES_URL,
+      badge: 'Agent Registry',
+      title: 'Agent Registry',
+      sub: 'Fork other agents to make them better or bootstrap your own.',
+      bg: '/examples/templates.jpg',
+      link: '/registry',
     },
   ],
 };

@@ -45,23 +45,28 @@ const Header = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className='grid gap-3 p-4 w-full md:w-[350px]'>
-                    <ListItem href={MB_URL.BITTE_WALLET} title='AI Wallet'>
+                    <ListItem
+                      href={MB_URL.BITTE_WALLET}
+                      title='AI Wallet'
+                      newTab
+                    >
                       Sponsored AI transaction builder with drops.
                     </ListItem>
-                    <ListItem
-                      href={MB_URL.TEMPLATES_URL}
-                      title='Developer Templates'
-                    >
-                      Launch cutting-edge Web3 experience with ready made
-                      templates in minutes.
+                    <ListItem href={MB_URL.REGISTRY} title='Agent Registry'>
+                      Fork other agents to make them better or bootstrap your
+                      own.
                     </ListItem>
-                    <ListItem href={MB_URL.MINTBASE_OMNI} title='Marketplace'>
+                    <ListItem
+                      href={MB_URL.MINTBASE_OMNI}
+                      title='Marketplace'
+                      newTab
+                    >
                       Discover, create, and sell NFTs on NEAR.
                     </ListItem>
-                    <ListItem href={MB_URL.PAYMASTER} title='Paymaster'>
+                    <ListItem href={MB_URL.PAYMASTER} title='Paymaster' newTab>
                       Fund gasless transactions for your community.
                     </ListItem>
-                    <ListItem href={MB_URL.DROPS} title='Token Drops'>
+                    <ListItem href={MB_URL.DROPS} title='Token Drops' newTab>
                       Create NFT drops with AI or our UI with gasless claiming
                     </ListItem>
                   </ul>
@@ -116,7 +121,8 @@ const Header = () => {
                   target='_blank'
                   href={MB_URL.BITTE_WALLET}
                 >
-                  Create Wallet <ArrowUpRight size={12} color='#000000' />
+                  Login / Create Wallet{' '}
+                  <ArrowUpRight size={12} color='#000000' />
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -230,16 +236,16 @@ const Header = () => {
 
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<'a'> & { newTab?: boolean }
+>(({ className, title, children, newTab = false, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
         <a
           ref={ref}
           aria-label={`Get more Infos about ${title}`}
-          rel='noopener noreferrer'
-          target='_blank'
+          target={newTab ? '_blank' : undefined}
+          rel={newTab ? 'noopener noreferrer' : undefined}
           className={cn(
             'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#414D7D40] hover:text-accent-foreground focus:bg-[#414D7D40] focus:text-accent-foreground py-4',
             className

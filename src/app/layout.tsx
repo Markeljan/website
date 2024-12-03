@@ -8,9 +8,7 @@ import { Inter } from 'next/font/google';
 
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
-
-/* import { Providers } from '@/components/layout/AppProvider'; */
-
+import './markdown.css';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
