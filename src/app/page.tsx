@@ -55,13 +55,16 @@ export default function Home() {
   return (
     <main className='flex flex-col items-center justify-between'>
       <Hero />
-      <BitteAiChat
-        agentData={mockAgentData}
-        openAgentSelector={mockOpenAgentSelector}
-        walletInfo={mockWalletInfo}
-        walletConfig={mockWalletConfig}
-        colors={mockColors}
-      />
+      <div className='w-[70%]'>
+        <BitteAiChat
+          agentData={mockAgentData}
+          openAgentSelector={mockOpenAgentSelector}
+          walletInfo={mockWalletInfo}
+          walletConfig={mockWalletConfig}
+          colors={mockColors}
+        />
+      </div>
+
       <HomeComponent />
     </main>
   );
