@@ -5,6 +5,8 @@ import {
 } from '@/lib/api/ai-registry/registry';
 import { getAllDailyPingsByAgentId } from '@/lib/api/kv';
 
+export const revalidate = 0;
+
 export default async function AgentDetail({
   params,
 }: {
@@ -15,6 +17,7 @@ export default async function AgentDetail({
   const data = await getAssistantById(agentId);
   const relatedAgents = await getAssistantsByCategory(data?.category);
   const pings = await getAllDailyPingsByAgentId(agentId);
+
   if (!data) {
     return null;
   }
