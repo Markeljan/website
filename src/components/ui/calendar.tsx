@@ -34,7 +34,7 @@ export function Calendar({ record }: CalendarProps) {
 
   const explicitTheme: ThemeInput = {
     light: ['#f0f0f0', '#e0f2e9', '#c3e6cb', '#28a745', '#1e7e34'],
-    dark: ['#383838', '#2d4a34', '#28a745', '#32cd32', '#90ee90'],
+    dark: ['#1e293b', '#2d4a34', '#28a745', '#32cd32', '#90ee90'],
   };
 
   return (
