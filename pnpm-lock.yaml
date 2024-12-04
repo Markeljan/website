@@ -66,8 +66,8 @@ importers:
         specifier: link:openai/resources/beta/assistants
         version: link:openai/resources/beta/assistants
       bitte-ai-chat:
-        specifier: file:../bitte-ai-chat
-        version: file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8)
+        specifier: 0.0.1-beta-7
+        version: 0.0.1-beta-7(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -2313,8 +2313,8 @@ packages:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
 
-  bitte-ai-chat@file:../bitte-ai-chat:
-    resolution: {directory: ../bitte-ai-chat, type: directory}
+  bitte-ai-chat@0.0.1-beta-7:
+    resolution: {integrity: sha512-7ckG63W6EInzKP5OUs3VWs5VIj/VdGMYJiN+Y0hgXr5z7pGbdF6uLpETV7VGKroNswEHmlekK2FaXVGDC8Dv6A==}
     peerDependencies:
       react: ^18.1.0
       react-dom: ^18.1.0
@@ -8091,7 +8091,7 @@ snapshots:
 
   binary-extensions@2.2.0: {}
 
-  bitte-ai-chat@file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8):
+  bitte-ai-chat@0.0.1-beta-7(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8):
     dependencies:
       '@ai-sdk/anthropic': 1.0.2(zod@3.23.8)
       '@ai-sdk/openai': 1.0.5(zod@3.23.8)
