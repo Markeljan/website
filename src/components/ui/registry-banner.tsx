@@ -4,7 +4,7 @@ import { Button } from './button';
 export const RegistryBanner = () => {
   return (
     <section className='mb-20 mt-9 md:mt-12'>
-      <div className='relative rounded-md border border-mb-gray-800 h-fit w-full bg-mb-gray-900 h-[344px] sm:h-[324px] hover:bg-mb-gray-1000 transition-all duration-500'>
+      <div className='relative rounded-md border border-mb-gray-800 h-fit w-full bg-mb-gray-900 h-[344px] sm:h-[324px]'>
         <Link
           href='https://docs.bitte.ai/'
           className='flex justify-between items-center'
