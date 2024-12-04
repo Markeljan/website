@@ -4,7 +4,7 @@ import { Button } from './button';
 export const RegistryBanner = () => {
   return (
     <section className='mb-20 mt-9 md:mt-12'>
-      <div className='relative rounded-md border border-mb-gray-800 h-fit w-full bg-mb-gray-900 h-[344px] sm:h-[324px]'>
+      <div className='relative rounded-md border border-mb-gray-800 h-fit w-full bg-mb-gray-900 h-[344px] sm:h-[324px] bg-cover bg-no-repeat lg:bg-[url("/registry_banner.svg")] bg-[url("/registry_banner_mobile.svg")]'>
         <Link
           href='https://docs.bitte.ai/'
           className='flex justify-between items-center'
@@ -23,7 +23,7 @@ export const RegistryBanner = () => {
               </Button>
             </div>
           </div>
-          <div className='absolute top-0 right-0 z-0'>
+          {/*           <div className='absolute top-0 right-0 z-0'>
             <img
               src='/registry_banner.svg'
               className='hidden lg:block'
@@ -31,10 +31,10 @@ export const RegistryBanner = () => {
             />
             <img
               src='/registry_banner_mobile.svg'
-              className='lg:hidden max-h-[300px]'
+              className='lg:hidden h-full'
               alt='Registry banner mobile'
             />
-          </div>
+          </div> */}
         </Link>
       </div>
     </section>
