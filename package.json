@@ -30,7 +30,6 @@
     "@vercel/kv": "^3.0.0",
     "@vercel/speed-insights": "^1.0.10",
     "ai": "^4.0.2",
-    "assistants": "link:openai/resources/beta/assistants",
     "bitte-ai-chat": "file:../bitte-ai-chat",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

@@ -15,11 +15,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Bitte',
+  description:
+    'Your portal to effortlessly launch cutting-edge Web3 experiences.',
+  metadataBase: new URL('https://bitte.ai'),
   openGraph: {
     title: 'Bitte - https://bitte.ai',
     description:
       'Your portal to effortlessly launch cutting-edge Web3 experiences.',
-
     images: [
       {
         type: 'image/png',
@@ -38,8 +40,6 @@ export const metadata: Metadata = {
     creator: 'Mintbase',
     images: 'https://bitte.ai/thumbnail.png',
   },
-  description:
-    'Your portal to effortlessly launch cutting-edge Web3 experiences.',
 };
 
 export default function RootLayout({

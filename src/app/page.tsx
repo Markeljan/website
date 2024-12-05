@@ -2,7 +2,7 @@
 
 import Hero from '@/components/layout/Hero';
 import { HomeComponent } from '@/components/layout/Home';
-import { BitteAiChat } from 'bitte-ai-chat';
+import { BitteAiChat, WalletConfig, WalletInfo } from 'bitte-ai-chat';
 
 const mockAgentData = {
   name: 'Mock Agent',
@@ -18,12 +18,10 @@ const mockOpenAgentSelector = () => {
   console.log('Agent selector opened');
 };
 
-const mockWalletInfo = {
-  address: '0x1234567890abcdef',
-  balance: '10 ETH',
+const mockWalletInfo: WalletInfo = {
   accountData: {
-    devicePublicKey: 'mockDevicePublicKey',
-    accountId: 'mockAccountId',
+    accountId: 'markeljan.near',
+    devicePublicKey: 'ed25519:8By6D6bYiWRPWuaxjhWQj7C5294YzETf2fnSja8dE6c7',
     isCreated: true,
   },
   isLoading: false,
@@ -32,15 +30,18 @@ const mockWalletInfo = {
   evmAdapter: {} as any, // Add other required properties here
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const mockWalletConfig = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  network: 'mainnet' as any, // Ensure this matches one of the Network type values
-  provider: 'rpc',
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  networkConfig: {} as any, // Add appropriate configuration here
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  relayer: {} as any, // Add appropriate configuration here
+const mockWalletConfig: WalletConfig = {
+  network: 'mainnet',
+  networkConfig: {
+    networkId: 'mainnet',
+    viewAccountId: 'mainnet',
+    nodeUrl: 'https://free.rpc.fastnear.com',
+    walletUrl: 'https://wallet.mainnet.near.org',
+    helperUrl: 'https://helper.mainnet.near.org',
+  },
+  relayer: {
+    accountId: 'mintbase.near',
+  },
 };
 
 const mockColors = {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://mintbase.xyz/sitemap.xml',
+    sitemap: 'https://bitte.ai/sitemap.xml',
   };
 }
