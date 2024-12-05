@@ -4,7 +4,7 @@ import { MarkdownBody } from './MarkdownBody';
 import { Card, CardContent } from '../ui/card';
 import { RelatedTemplates } from './Related';
 import { Calendar } from '../ui/calendar';
-import GitCommitHistory from '../ui/commit-history';
+import GitCommitHistory from './CommitHistory';
 export const AgentDetailComponent = ({
   agent,
   relatedAgents,

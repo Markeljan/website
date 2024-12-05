@@ -1,6 +1,6 @@
 'use client';
 import { RegistryData, Filters } from '@/lib/types/agent.types';
-import { RegistryBanner } from '../ui/registry-banner';
+import { RegistryBanner } from './RegistryBanner';
 import AllAgents from '@/components/ui/agents/AllAgents';
 import { AgentStarterCard } from '../ui/agents/AgentStarterCard';
 

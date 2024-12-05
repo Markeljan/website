@@ -2,6 +2,7 @@
 import { Filters as AgentFilters, RegistryData } from '@/lib/types/agent.types';
 import { filterHandler } from '@/lib/utils/filters';
 import { ChevronRight } from 'lucide-react';
+import { useSearchParams } from 'next/dist/client/components/navigation';
 import { useState } from 'react';
 import { Button } from '../button';
 import {
@@ -13,10 +14,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '../dialog';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
-import Filters from './Filters';
 import AgentCard from './AgentCard';
+import Filters from './Filters';
+import PlaygroundSwitch from './PlaygroundSwitch';
 
 const AllAgents = ({
   templates,
@@ -28,7 +28,9 @@ const AllAgents = ({
   unverifiedAgents: RegistryData[];
 }) => {
   const [selectedFilters, setSelectedFilters] = useState<AgentFilters[]>([]);
-  const [playgroundMode, setPlaygroundMode] = useState(false);
+
+  const searchParams = useSearchParams();
+  const isPlayground = searchParams.get('isPlayground') === 'true';
 
   const handleFilterClick = (value: string, label: string) => {
     setSelectedFilters((prevFilters) =>
@@ -41,7 +43,7 @@ const AllAgents = ({
   };
 
   const filteredAgents = selectedFilters?.length
-    ? (playgroundMode ? unverifiedAgents : templates).filter((agent) => {
+    ? (isPlayground ? unverifiedAgents : templates).filter((agent) => {
         if (!agent) return false;
 
         return selectedFilters.every((filter) => {
@@ -51,7 +53,7 @@ const AllAgents = ({
           return true;
         });
       })
-    : playgroundMode
+    : isPlayground
       ? unverifiedAgents
       : templates;
 
@@ -88,15 +90,11 @@ const AllAgents = ({
                 <div className='border-b border-mb-gray-500 p-6 bg-mb-gray-550 w-auto'>
                   <DialogTitle>Filters</DialogTitle>
                 </div>
-                <div className='flex items-center justify-between p-4'>
-                  <Label htmlFor='playground-mode-mobile'>Playground</Label>
-                  <Switch
-                    id='playground-mode-mobile'
-                    checked={playgroundMode}
-                    onCheckedChange={setPlaygroundMode}
-                  />
+                <div className='p-4'>
+                  <PlaygroundSwitch />
                 </div>
-                <div className='p-6 h-[70vh] overflow-scroll'>
+
+                <div className='p-4 h-[70vh] overflow-scroll'>
                   <Filters
                     filters={filters}
                     selectedFilters={selectedFilters}
@@ -128,14 +126,10 @@ const AllAgents = ({
         </div>
         <div className='col-span-1 hidden lg:block w-full'>
           <div className='border-b border-mb-gray-500 mb-6'></div>
-          <div className='flex items-center space-x-2 mb-6'>
-            <Switch
-              id='playground-mode'
-              checked={playgroundMode}
-              onCheckedChange={setPlaygroundMode}
-            />
-            <Label htmlFor='playground-mode'>Playground</Label>
+          <div className='mb-6'>
+            <PlaygroundSwitch />
           </div>
+
           <Filters
             filters={filters}
             selectedFilters={selectedFilters}
