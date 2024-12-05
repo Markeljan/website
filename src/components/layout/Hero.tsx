@@ -1,16 +1,11 @@
 'use client';
 
 import { MB_URL } from '@/lib/url';
+import Link from 'next/link';
 import { Button } from '../ui/button';
 import AiSection from './AiSection';
 
 const Hero = () => {
-  // Function to handle card click
-  const handleCardClick = (url: string) => {
-    // Use `window.open` for opening a new tab
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <section className='w-full'>
       <div className='relative w-screen  h-full'>
@@ -37,22 +32,24 @@ const Hero = () => {
             <AiSection />
             <div className='flex justify-center'>
               <div className='mt-8 mr-5'>
-                <Button
-                  variant='outline'
-                  className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
-                  onClick={() => handleCardClick(`${MB_URL.DEV_DOCS}`)}
-                >
-                  Build Chain Agent
-                </Button>
+                <a href={MB_URL.DEV_DOCS} target='_blank'>
+                  <Button
+                    variant='outline'
+                    className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
+                  >
+                    Build Chain Agent
+                  </Button>
+                </a>
               </div>
               <div className='mt-8'>
-                <Button
-                  variant='outline'
-                  className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
-                  onClick={() => handleCardClick(`${MB_URL.REGISTRY}`)}
-                >
-                  Agent Registry
-                </Button>
+                <Link href={MB_URL.REGISTRY}>
+                  <Button
+                    variant='outline'
+                    className='shadow-lg text-white hover:text-black bg-black bg-opacity-55 hover:bg-white border border-[#313E52] p-6'
+                  >
+                    Agent Registry
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

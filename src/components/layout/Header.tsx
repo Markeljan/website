@@ -1,9 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import React from 'react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,12 +8,16 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { useWindowSize } from '@/lib/utils/useWindowSize';
-import { developerLinks, communityLinks } from '@/lib/data/navData';
-import { Modal } from '../ui/Modal';
+} from '@/components/layout/NavigationMenu';
+import { communityLinks, developerLinks } from '@/lib/data/navData';
 import { MB_URL } from '@/lib/url';
+import { cn } from '@/lib/utils';
+import { useWindowSize } from '@/lib/utils/useWindowSize';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { Button } from '../ui/button';
+import { Modal } from '../ui/Modal';
 
 const Header = () => {
   const { width } = useWindowSize();
@@ -116,13 +116,17 @@ const Header = () => {
               </NavigationMenuItem>
               <NavigationMenuItem className='bg-white rounded-sm'>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} gap-1.5 bg-transparent text-black`}
                   rel='noopener noreferrer'
                   target='_blank'
                   href={MB_URL.BITTE_WALLET}
                 >
-                  Login / Create Wallet{' '}
-                  <ArrowUpRight size={12} color='#000000' />
+                  <Button
+                    variant='default'
+                    className='flex gap-1.5 items-center'
+                  >
+                    Login / Create Wallet
+                    <ArrowUpRight size={16} color='#000000' />
+                  </Button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

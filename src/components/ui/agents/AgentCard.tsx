@@ -1,11 +1,11 @@
+import { Badge } from '@/components/ui/badge';
 import { RegistryData } from '@/lib/types/agent.types';
 import { shortenString } from '@/lib/utils/strings';
 import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../button';
-import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage } from '../avatar';
+import { Button } from '../button';
 
 const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
   const defaultHref = `/registry/${agent?.id}`;
@@ -65,49 +65,57 @@ const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
                 </div>
               </div>
             </div>
-            <div className='flex lg:hidden items-center justify-between mt-5'>
-              <Button
-                variant='secondary'
-                className={agent?.id === 'simple-token-drop' ? 'hidden' : ''}
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  window.location.href = defaultHref;
-                }}
-              >
-                Run Agent
-              </Button>
-            </div>
-            <div className='text-mb-gray-200 text-[14px] hidden lg:flex items-center mt-2'>
-              By
-              <Avatar className='bg-mb-gray-700 p-[2px] h-6 w-6 ml-2 mr-0.5'>
-                <AvatarImage src='/logo.svg' alt='bitte' />
-              </Avatar>
-              <span className='mr-3'>{agent?.author}</span>
-              {agent.category && (
-                <Badge
-                  variant='secondary'
-                  className='bg-mb-gray-700 rounded-full mr-2'
-                >
-                  {agent.category}
-                </Badge>
-              )}
-              {agent.verified ? (
-                <Badge
-                  variant='secondary'
-                  className='bg-[#22C55E33] text-[#22C55E] flex items-center gap-1 rounded-full mr-2'
-                >
-                  <CheckCircle2 className='w-3 h-3' />
-                  Verified
-                </Badge>
-              ) : (
-                <Badge
-                  variant='secondary'
-                  className='bg-[#C084FC33] text-[#C084FC] rounded-full'
-                >
-                  Playground
-                </Badge>
-              )}
+            <div className='text-mb-gray-200 text-[14px] flex justify-between items-center mt-2'>
+              <div className='flex justify-between items-center w-full'>
+                <div className='hidden lg:flex'>
+                  By
+                  <Avatar className='bg-mb-gray-700 p-[2px] h-6 w-6 ml-2 mr-0.5'>
+                    <AvatarImage src='/logo.svg' alt='bitte' />
+                  </Avatar>
+                  <span className='mr-3'>{agent?.author}</span>
+                </div>
+                <div className='lg:hidden'>
+                  <Button
+                    variant='secondary'
+                    className={
+                      agent?.id === 'simple-token-drop' ? 'hidden' : ''
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.location.href = defaultHref;
+                    }}
+                  >
+                    Run Agent
+                  </Button>
+                </div>
+                <div className='flex gap-2'>
+                  {agent.category && (
+                    <Badge
+                      variant='pill'
+                      className='bg-mb-gray-700 rounded-full'
+                    >
+                      {agent.category}
+                    </Badge>
+                  )}
+                  {agent.verified ? (
+                    <Badge
+                      variant='pill'
+                      className='bg-[#22C55E33] text-[#22C55E] flex items-center gap-1 rounded-full'
+                    >
+                      <CheckCircle2 className='w-3 h-3' />
+                      Verified
+                    </Badge>
+                  ) : (
+                    <Badge
+                      variant='pill'
+                      className='bg-[#C084FC33] text-[#C084FC] rounded-full'
+                    >
+                      Playground
+                    </Badge>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
