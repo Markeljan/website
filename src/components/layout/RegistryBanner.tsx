@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Button } from './button';
+import PlaygroundSwitch from '../ui/agents/PlaygroundSwitch';
+import { Button } from '../ui/button';
 
 export const RegistryBanner = () => {
   return (
@@ -17,24 +18,13 @@ export const RegistryBanner = () => {
               Contribute to the growing ecosystem, and earn monetary rewards by
               building agents.
             </span>
-            <div>
+            <div className='flex gap-4'>
               <Button variant='default' size='lg'>
                 Learn More
               </Button>
+              <PlaygroundSwitch />
             </div>
           </div>
-          {/*           <div className='absolute top-0 right-0 z-0'>
-            <img
-              src='/registry_banner.svg'
-              className='hidden lg:block'
-              alt='Registry banner'
-            />
-            <img
-              src='/registry_banner_mobile.svg'
-              className='lg:hidden h-full'
-              alt='Registry banner mobile'
-            />
-          </div> */}
         </Link>
       </div>
     </section>
