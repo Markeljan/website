@@ -1,15 +1,16 @@
+import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import { Switch } from '../switch';
 import { Label } from '../label';
+import { Switch } from '../switch';
 
 const PlaygroundSwitch: React.FC = () => {
+  const searchParams = useSearchParams();
   const [playgroundMode, setPlaygroundMode] = useState(false);
 
   useEffect(() => {
-    const url = new URL(window.location.href);
-    const isPlayground = url.searchParams.get('isPlayground') === 'true';
+    const isPlayground = searchParams.get('isPlayground') === 'true';
     setPlaygroundMode(isPlayground);
-  }, []);
+  }, [searchParams]); // Dependency on searchParams
 
   const updatePlaygroundQueryParam = (checked: boolean) => {
     const url = new URL(window.location.href);
@@ -19,7 +20,6 @@ const PlaygroundSwitch: React.FC = () => {
       url.searchParams.delete('isPlayground');
     }
     window.history.replaceState({}, '', url.toString());
-    setPlaygroundMode(checked);
   };
 
   return (
@@ -30,7 +30,6 @@ const PlaygroundSwitch: React.FC = () => {
         onCheckedChange={(checked) => {
           updatePlaygroundQueryParam(checked);
         }}
-        onClick={(e) => e.stopPropagation()}
       />
       <Label htmlFor='playground-mode'>Playground</Label>
     </div>
