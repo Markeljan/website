@@ -1,11 +1,11 @@
+import { Badge } from '@/components/ui/badge';
 import { RegistryData } from '@/lib/types/agent.types';
 import { shortenString } from '@/lib/utils/strings';
 import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../button';
-import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage } from '../avatar';
+import { Button } from '../button';
 
 const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
   const defaultHref = `/registry/${agent?.id}`;
@@ -86,7 +86,7 @@ const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
               <span className='mr-3'>{agent?.author}</span>
               {agent.category && (
                 <Badge
-                  variant='secondary'
+                  variant='pill'
                   className='bg-mb-gray-700 rounded-full mr-2'
                 >
                   {agent.category}
@@ -94,7 +94,7 @@ const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
               )}
               {agent.verified ? (
                 <Badge
-                  variant='secondary'
+                  variant='pill'
                   className='bg-[#22C55E33] text-[#22C55E] flex items-center gap-1 rounded-full mr-2'
                 >
                   <CheckCircle2 className='w-3 h-3' />
@@ -102,7 +102,7 @@ const AgentCard = ({ agent }: { agent: RegistryData }): JSX.Element | null => {
                 </Badge>
               ) : (
                 <Badge
-                  variant='secondary'
+                  variant='pill'
                   className='bg-[#C084FC33] text-[#C084FC] rounded-full'
                 >
                   Playground
