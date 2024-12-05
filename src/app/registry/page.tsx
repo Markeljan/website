@@ -14,7 +14,7 @@ export default async function Registry() {
             unverifiedAgents={data.unverifiedAgents}
             filters={data.filters}
           />
-        ) : null}{' '}
+        ) : null}
       </Suspense>
     </main>
   );
