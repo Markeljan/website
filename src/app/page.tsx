@@ -5,12 +5,12 @@ import { HomeComponent } from '@/components/layout/Home';
 import { BitteAiChat, WalletConfig, WalletInfo } from 'bitte-ai-chat';
 
 const mockAgentData = {
-  name: 'Mock Agent',
-  id: 'agent-123',
+  name: 'bitte-assistant',
+  id: 'bitte-assistant',
   status: 'active',
-  accountId: 'account-456', // Added property
-  description: 'This is a mock agent for testing purposes.', // Added property
-  instructions: 'Follow the guidelines provided.', // Added property
+  accountId: 'bitte.near', // Added property
+  description: '', // Added property
+  instructions: '', // Added property
   verified: true, // Added property
 };
 

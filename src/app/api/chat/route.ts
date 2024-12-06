@@ -1,15 +1,25 @@
 import type { NextRequest } from 'next/server';
 
-const BITTE_API_URL =
-  process.env.BITTE_API_URL ||
-  'http://localhost:3000/api/ai-router/v1/chat-external';
+const { BITTE_API_KEY, BITTE_API_URL = 'https://wallet.bitte.ai/api/v1/chat' } =
+  process.env;
 
 export const POST = async (req: NextRequest): Promise<Response> => {
-  return fetch(BITTE_API_URL, {
+  const requestInit: RequestInit & { duplex: 'half' } = {
     method: 'POST',
-    body: await req.text(),
+    body: req.body,
     headers: {
-      Authorization: `Bearer ${process.env.BITTE_API_KEY}`,
+      Authorization: `Bearer ${BITTE_API_KEY}`,
     },
+    duplex: 'half',
+  };
+
+  const upstreamResponse = await fetch(BITTE_API_URL, requestInit);
+
+  const headers = new Headers(upstreamResponse.headers);
+  headers.delete('Content-Encoding');
+
+  return new Response(upstreamResponse.body, {
+    status: upstreamResponse.status,
+    headers,
   });
 };

@@ -12,7 +12,7 @@ importers:
   .:
     dependencies:
       '@ai-sdk/openai':
-        specifier: ^1.0.2
+        specifier: ^1.0.5
         version: 1.0.5(zod@3.23.8)
       '@google-cloud/firestore':
         specifier: ^7.10.0
@@ -60,11 +60,11 @@ importers:
         specifier: ^1.0.10
         version: 1.0.10(next@14.1.0(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       ai:
-        specifier: ^4.0.2
+        specifier: ^4.0.6
         version: 4.0.6(react@18.2.0)(zod@3.23.8)
       bitte-ai-chat:
         specifier: file:../bitte-ai-chat
-        version: file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8)
+        version: file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(typescript@5.3.3)(zod@3.23.8)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -87,19 +87,19 @@ importers:
         specifier: ^1.6.6
         version: 1.6.6(next@14.1.0(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       openai:
-        specifier: ^4.73.0
+        specifier: ^4.73.1
         version: 4.73.1(zod@3.23.8)
       prismjs:
         specifier: ^1.29.0
         version: 1.29.0
       react:
-        specifier: ^18.1.0
+        specifier: ^18.2.0
         version: 18.2.0
       react-activity-calendar:
         specifier: ^2.7.1
         version: 2.7.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom:
-        specifier: ^18.1.0
+        specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-markdown:
         specifier: ^9.0.1
@@ -2313,8 +2313,8 @@ packages:
   bitte-ai-chat@file:../bitte-ai-chat:
     resolution: {directory: ../bitte-ai-chat, type: directory}
     peerDependencies:
-      react: ^18.1.0
-      react-dom: ^18.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
 
   bn.js@4.12.1:
     resolution: {integrity: sha512-k8TVBiPkPJT9uHLdOKfFpqcfprwBFOAAXXozRubr7R7PfIuKvQlzcI4M0pALeqXN09vdaMbUdUj+pass+uULAg==}
@@ -2389,8 +2389,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001591:
-    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
+  caniuse-lite@1.0.30001686:
+    resolution: {integrity: sha512-Y7deg0Aergpa24M3qLC5xjNklnKnhsmSyR/V89dLZ1n0ucJIFNs7PgR2Yfa/Zf6W79SbBicgtGxZr2juHkEUIA==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2615,6 +2615,15 @@ packages:
 
   debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  debug@4.3.7:
+    resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -3698,9 +3707,6 @@ packages:
     resolution: {integrity: sha512-yPBThwecp1wS9DmoA4x4KR2h3QoslacnDR8ypuFM962kI4/456Iy1oHx2RAgh4jfZNdn0bctsdadceiBUgpU1g==}
     hasBin: true
 
-  js-base64@2.6.4:
-    resolution: {integrity: sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==}
-
   js-sha256@0.9.0:
     resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==}
 
@@ -3888,8 +3894,8 @@ packages:
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
 
-  lucide-react@0.462.0:
-    resolution: {integrity: sha512-NTL7EbAao9IFtuSivSZgrAh4fZd09Lr+6MTkqIxuHaH2nnYiYIzXPo06cOxHg9wKLdj6LL8TByG4qpePqwgx/g==}
+  lucide-react@0.465.0:
+    resolution: {integrity: sha512-uV7WEqbwaCcc+QjAxIhAvkAr3kgwkkYID3XptCHll72/F7NZlk6ONmJYpk+Xqx5Q0r/8wiOjz73H1BYbl8Z8iw==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
@@ -4760,9 +4766,6 @@ packages:
   scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
 
-  scss-tokenizer@0.4.3:
-    resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
-
   secp256k1@5.0.0:
     resolution: {integrity: sha512-TKWX8xvoGHrxVdqbYeZM9w+izTF4b9z3NhSaDkdn81btvuh+ivbIMGT/zQvDtTFWhRlThpoz6LEYTr7n8A5GcA==}
     engines: {node: '>=14.0.0'}
@@ -4845,10 +4848,6 @@ packages:
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-
-  source-map@0.7.4:
-    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
-    engines: {node: '>= 8'}
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
@@ -7419,7 +7418,7 @@ snapshots:
       '@typescript-eslint/types': 7.1.0
       '@typescript-eslint/typescript-estree': 7.1.0(typescript@5.3.3)
       '@typescript-eslint/visitor-keys': 7.1.0
-      debug: 4.3.4
+      debug: 4.3.7
       eslint: 8.57.0
     optionalDependencies:
       typescript: 5.3.3
@@ -8001,7 +8000,7 @@ snapshots:
   autoprefixer@10.4.17(postcss@8.4.35):
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001686
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -8088,7 +8087,7 @@ snapshots:
 
   binary-extensions@2.2.0: {}
 
-  bitte-ai-chat@file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(tailwindcss@3.4.1)(typescript@5.3.3)(zod@3.23.8):
+  bitte-ai-chat@file:../bitte-ai-chat(@types/react-dom@18.2.19)(@types/react@18.2.60)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(near-api-js@5.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.28.0)(typescript@5.3.3)(zod@3.23.8):
     dependencies:
       '@ai-sdk/anthropic': 1.0.2(zod@3.23.8)
       '@ai-sdk/openai': 1.0.5(zod@3.23.8)
@@ -8104,7 +8103,7 @@ snapshots:
       ai: 4.0.11(react@18.2.0)(zod@3.23.8)
       class-variance-authority: 0.7.1
       clsx: 2.1.1
-      lucide-react: 0.462.0(react@18.2.0)
+      lucide-react: 0.465.0(react@18.2.0)
       near-safe: 0.9.4(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(typescript@5.3.3)(zod@3.23.8)
       openai: 4.73.1(zod@3.23.8)
       openapi-types: 12.1.3
@@ -8115,9 +8114,7 @@ snapshots:
       remark-gfm: 4.0.0
       remark-math: 6.0.0
       rollup-plugin-dts: 6.1.1(rollup@4.28.0)(typescript@5.3.3)
-      scss-tokenizer: 0.4.3
       tailwind-merge: 2.5.5
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
       vaul: 1.1.1(@types/react-dom@18.2.19)(@types/react@18.2.60)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       viem: 2.21.53(typescript@5.3.3)(zod@3.23.8)
     transitivePeerDependencies:
@@ -8142,7 +8139,6 @@ snapshots:
       - near-api-js
       - rollup
       - supports-color
-      - tailwindcss
       - typescript
       - utf-8-validate
       - zod
@@ -8176,7 +8172,7 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001686
       electron-to-chromium: 1.4.682
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
@@ -8221,7 +8217,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001591: {}
+  caniuse-lite@1.0.30001686: {}
 
   ccount@2.0.1: {}
 
@@ -8425,6 +8421,10 @@ snapshots:
   debug@4.3.4:
     dependencies:
       ms: 2.1.2
+
+  debug@4.3.7:
+    dependencies:
+      ms: 2.1.3
 
   decimal.js-light@2.5.1: {}
 
@@ -9919,8 +9919,6 @@ snapshots:
 
   jiti@2.4.1: {}
 
-  js-base64@2.6.4: {}
-
   js-sha256@0.9.0: {}
 
   js-sha3@0.8.0: {}
@@ -10116,7 +10114,7 @@ snapshots:
     dependencies:
       react: 18.2.0
 
-  lucide-react@0.462.0(react@18.2.0):
+  lucide-react@0.465.0(react@18.2.0):
     dependencies:
       react: 18.2.0
 
@@ -10671,7 +10669,7 @@ snapshots:
       '@next/env': 14.1.0
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001686
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.2.0
@@ -11382,11 +11380,6 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
-  scss-tokenizer@0.4.3:
-    dependencies:
-      js-base64: 2.6.4
-      source-map: 0.7.4
-
   secp256k1@5.0.0:
     dependencies:
       elliptic: 6.6.1
@@ -11466,8 +11459,6 @@ snapshots:
       source-map: 0.6.1
 
   source-map@0.6.1: {}
-
-  source-map@0.7.4: {}
 
   space-separated-tokens@2.0.2: {}
 
