@@ -30,7 +30,7 @@
     "@vercel/kv": "^3.0.0",
     "@vercel/speed-insights": "^1.0.10",
     "ai": "^4.0.6",
-    "bitte-ai-chat": "file:../bitte-ai-chat",
+    "@markeljan/bitte-test-temp": "0.0.1-beta-8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.11.17",

@@ -2,7 +2,11 @@
 
 import Hero from '@/components/layout/Hero';
 import { HomeComponent } from '@/components/layout/Home';
-import { BitteAiChat, WalletConfig, WalletInfo } from 'bitte-ai-chat';
+import {
+  BitteAiChat,
+  WalletConfig,
+  WalletInfo,
+} from '@markeljan/bitte-test-temp';
 
 const mockAgentData = {
   name: 'bitte-assistant',
